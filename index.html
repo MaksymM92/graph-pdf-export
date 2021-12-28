@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+  <script src="scripts/line-chart.js" defer></script>
+  <script src="scripts/bar-chart.js" defer></script>
+  <script src="scripts/pie-chart.js" defer></script>
+  <script src="scripts/pdf-export.js" defer></script>
+  <title>Graph</title>
+</head>
+<body>
+
+<header>
+  <span>Dashboard</span>
+</header>
+
+<section class="charts">
+  <div class="widget">
+    <div class="widget-header">
+      <span>Line chart</span>
+      <button type="button" class="export-button" onclick="exportChart('line-chart', [15, 15, 280, 170])">
+        Export
+      </button>
+    </div>
+    <div class="chart" style="padding: 15px">
+      <canvas id="line-chart" width="600" height="350"></canvas>
+    </div>
+  </div>
+  <div class="widget">
+    <div class="widget-header">
+      <span>Bar chart</span>
+      <button type="button" class="export-button" onclick="exportChart('bar-chart', [15, 15, 270, 170])">
+        Export
+      </button>
+    </div>
+    <div class="chart" style="padding: 15px">
+      <canvas id="bar-chart" width="600" height="350"></canvas>
+    </div>
+  </div>
+</section>
+
+<section class="pie-chart">
+  <div class="widget">
+    <div class="widget-header">
+      <span>Pie chart</span>
+      <button type="button" class="export-button" onclick="exportChart('pie-chart', [80, 30, 150, 150])">
+        Export
+      </button>
+    </div>
+    <div class="chart" style="padding: 15px">
+      <canvas id="pie-chart" width="500" height="500"></canvas>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
